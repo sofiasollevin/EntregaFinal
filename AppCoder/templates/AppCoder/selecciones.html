@@ -1,0 +1,95 @@
+{% extends "AppCoder/padre.html" %}
+ 
+{% load static %}
+
+{% block title %} 
+<title>Selecciones</title>
+{% endblock title %}
+
+{% block body %}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Header-->
+<header>
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder" style="color:black">Selecciones</h1>
+        </div>
+    </div>
+</header>
+
+ <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                               <a><img class="card-img-top" src="../../static/AppCoder/media/argentina.png" alt="..." /></a>
+                            <div class="card-body">
+                            <h2 class="card-title h4">Argentina</h2>
+                        </div>
+                    </div>
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a><img class="card-img-top" src="../../static/AppCoder/media/uruguay.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title h4">Uruguay</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Pagination-->
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                            <a><img class="card-img-top" src="../../static/AppCoder/media/brasil.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title h4">Brasil</h2>
+                                </div>
+                    </div>
+                <div>
+
+            </div>
+        </div>
+
+<div>
+
+<form action="" method="POST">
+                    {% csrf_token %}
+                    {{jugadores.as_p}}
+
+                    <input type="text" name="pais", id="pais">
+                    <input type="submit" value="Ingrese el país para ver sus jugadores">
+
+                </form>
+</div>
+<br>
+<br>
+    {% for jugador in jugadores %}
+        <p> {{jugador.nombre}}
+            {{jugador.apellido}} - {{jugador.posicion}} - {{jugador.nacimiento}} </p>
+    {% endfor %}
+
+<p class="px-4"><b>Si identificas que falta un jugador en el país que has elegido, por favor, presiona en Agregar Jugador y contribuye con nosotros</b></p>
+
+<h3 class="fs-5 mt-4 px-4 pb-1">
+    <div class="row content-center">
+        <a class="btn btn-primary" href= "{% url 'JugadoresFormulario' %}">Agregar Jugador</a>
+    </div>
+</h3>
+
+
+{% endblock %}
