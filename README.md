@@ -1,41 +1,53 @@
-# ProyectoCoder#   E n t r e g a 1 A l b o r n o z 
- 
- #   E n t r e g a 1 A l b o r n o z 
- 
- #   E n t r e g a b l e 1 A l b o r n o z 
- 
- #   E n t r e g a 1 A l b o r n o z
+#Proyecto CoderHouse - Sofía Levin, Nicolás Cide, Fátima Albornoz y Santiago Ferrero
 
-1. Para validar la herencia html escriba en el navegador las siguientes URL:
+Esta es una página web que tiene por objetivo entregar a los usuarios una serie de servicios relacionados con el Campeonato Mundial de Futbol de Qatar 2022. 
 
-a) localhost:8080/AppCoder/hinchasFormulario
-b) localhost:8080/AppCoder/jugadoresFormulario
-c) localhost:8080/AppCoder/dirigentesFormulario
-d) localhost:8080/AppCoder/funcionariosFormulario
-e) Las mismas deben tener el mismo "template de fondo" lo único que varía es lo comprendido dentro de los bloques
+En primer lugar, el sitio tiene la posibilidad de registrar usuarios con sus datos de XXXXXXXXXXX, y guarda esos datos en una base de datos SQLite.
 
-2. Para validar las clases, usaremos los formularios. Se ingresarán los datos en una tabla, y el valor ingresado tiene que corresponder con los datos que solicita el modelo.
+En la página de Inicio, que es la primer página del sitio, se muestra una serie de fotos que van cambiando a medida que pasan los segundos, y también se pueden cambiar con las flechas para el costado. 
 
-a) Ingrese a la url localhost:8080/AppCoder/jugadoresFormulario
-c) Por mas que intente poner en el campo numerocamiseta un string, el modelo no se lo permite
+Desde la página de Inicio a su vez, se puede acceder a las diferentes secciones del sitio, presionando en los botones en el margen superior de la pantalla, con las siguientes categorías: Noticias, Selecciones,  Chat, Contactos, About us, así como también la posibilidad de registrarse en la página presionando el botón Register
 
-3. Se crearon cuatro formularios, uno para cada clase:
+A su vez, en la parte inferior de la página de Inicio, existen accesos directos a cada una de estas mismas categorías, con una breve reseña que describe en qué consiste cada vista, y un mapa acompañado de una breve descripción de Qatar. 
 
-a) localhost:8080/AppCoder/hinchasFormulario
-b) localhost:8080/AppCoder/jugadoresFormulario
-c) localhost:8080/AppCoder/dirigentesFormulario
-d) localhost:8080/AppCoder/funcionariosFormulario
-e) Ingrese a cualquiera de ellos, complete los campos que aparecen y presione en enviar
-f) Luego valide abriendo su base de datos para asegurarse de que los datos fueron insertados en la misma
+Al presionar en cada uno de los botones mencionados, el sitio nos direcciona a otras URLs, recorriendo así el contenido del sitio. 
 
-4. Se crea un formulario para buscar algo en la base de datos, en este caso, buscará un nombre insertado en la base de datos correspondiente a la clase Hincha
+En primer lugar, tenemos la URL de Noticias, donde el usuario podrá acceder a las últimas noticias relevantes relacionadas con el Campeonato. Las noticias se despliegan incluyendo una foto, un texto descriptivo, y un botón de Leer más, que permite ampliar la noticia al presionar sobre el mismo. Se puede ver esta funcionalidad en la primer noticia, Grupos del Mundial Qatar 2022, la cual instrumentamos a modo de ejemplo. En el resto de las noticias, la página direcciona al usuario a otra página que muestra el mensaje de Pagina en Construcción, al presionar Leer más. 
 
-a) Ingrese a la url localhost:8080/AppCoder/hincasFormulario
-b) Complete los campos solicitados y presione enviar (Nombre, Apellido, Numerodesocio, Email)
-c) Abra su base de datos y valide que los campos fueron insertados en la misma
-d) Ingrese a la url localhost:8080/AppCoder/busquedaNombre
-e) Complete el campo con el nombre que ingresó en el paso b)
+En segundo lugar, tenemos la URL de Selecciones. En ella se puede apreciar las banderas de cada uno de los países participantes del Mundial (se colocaron las banderas de Argentina, Brasil y Uruguay a modo de ejemplo, para agregar el resto de los países es exactamente el mismo procedimiento seguido). Por otro lado, en la parte inferior de la página, existe un campo de Búsqueda, donde se pueden listar los jugadores de una Selección, al escribir el país pertinente. 
 
-5. Este es el archivo README.md 
- 
+Se han ingresado datos para los países de Argentina y Uruguay, a modo de ejemplo. Estos datos se encuentran guardados en una base de datos SQLite asociada a cada país. 
+
+Continuando con el sitio, se ha incluido una aplicación de mensajería, donde los usuarios pueden unirse a distintas salas, y participar de conversaciones multiusuario. Para acceder a esta funcionalidad, se debe presionar sobre el botón Chat. Al ingresar, el sistema va a solicitar que introduzca la sala en la cual quiere hablar, y el nombre del usuario con el cual quiere figurar. 
+
+Luego se despliega la historia de los mensajes enviados en dicha sala, y el usuario tiene la posibilidad de enviar nuevos mensajes. 
+
+Por otro lado, también existe la categoría Contactos, la cual nos direcciona a una URL en la que el usuario puede enviar mensajes de contacto con los administradores de la página. Allí puede ingresar sus datos Email, Nombre, Contacto telefónico y el mensaje que desea hacer llegar. Los datos y el respectivo mensaje ingresado, son guardados en una Base de Datos SQLite, también pudiendo ser visualizada desde la vista Admin.
+
+La última categoría es la de About Us, en la que se despliega una declaración de la misión del sitio, en la parte superior, y en la parte inferior se realiza una pequeña presentación de cada uno de los integrantes del equipo.
+
+Para finalizar, se presenta una lista con las URLs del proyecto para poder interactuar con el mismo:
+
+Inicio: http://localhost:8000/
+Noticias: http://localhost:8000/noticias
+Selecciones: http://localhost:8000/selecciones
+Chat: http://localhost:8000/AppChat
+Contactos: http://localhost:8000/contactos
+About Us: http://localhost:8000/nosotros
+Admin: http://localhost:8000/admin/ 
+
+Este último enlace, cuenta con dos usuarios. El primero tiene permisos de lectura, escritura y el segundo sólo de lectura.
+
+Usuario Administrador: admin 
+Password: admin
+
+Usuario: usuario
+Password: sinprivilegios
+
+Participación de cada integrante:
+Sofía Levin: views, formularios, html, base de datos
+Nicolás Cide: models, urls, html, migraciones
+Fátima Albornoz: views, urls, app chat, admin
+Santiago Ferrero: models, formularios, app chat, readme
+La coordinación del trabajo y el resto del trabajo se hizo en conjunto por zoom.
  
