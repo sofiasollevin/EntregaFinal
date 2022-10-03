@@ -6,9 +6,7 @@ En primer lugar, el sitio tiene la posibilidad de registrar usuarios con sus dat
 
 En la página de Inicio, que es la primer página del sitio, se muestra una serie de fotos que van cambiando a medida que pasan los segundos, y también se pueden cambiar con las flechas para el costado. 
 
-Desde la página de Inicio a su vez, se puede acceder a las diferentes secciones del sitio, presionando en los botones en el margen superior de la pantalla, con las siguientes categorías: Noticias, Selecciones,  Chat, Contactos, About us, así como también la posibilidad de registrarse en la página presionando el botón Register
-
-A su vez, en la parte inferior de la página de Inicio, existen accesos directos a cada una de estas mismas categorías, con una breve reseña que describe en qué consiste cada vista, y un mapa acompañado de una breve descripción de Qatar. 
+Desde la página de Inicio a su vez, se puede acceder a las diferentes secciones del sitio, presionando en los botones en el margen superior de la pantalla, con las siguientes categorías: Noticias, Selecciones,  Chat, Contactos, About us. A su vez, en la parte inferior de la página de Inicio, existen accesos directos a cada una de estas mismas categorías, con una breve reseña que describe en qué consiste cada vista, y un mapa acompañado de una breve descripción de Qatar. 
 
 Al presionar en cada uno de los botones mencionados, el sitio nos direcciona a otras URLs, recorriendo así el contenido del sitio. 
 
