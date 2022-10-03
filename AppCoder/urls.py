@@ -1,6 +1,7 @@
 from django.urls import path
 from AppCoder import views
 from AppChat import views3
+from django.contrib import admin
 
 urlpatterns = [
    
@@ -9,7 +10,6 @@ urlpatterns = [
     path('noticias', views.noticias, name="Noticias"),
     path('noticias/noticia1', views.noticia1, name="Noticia1"),
     path('contactos', views.contactosFormulario, name="Contactos"),
-    path('login', views.usuarioFormulario, name="Usuarios"),
     path('nosotros', views.nosotros, name="Nosotros"),
     path('selecciones/jugadoresFormulario', views.jugadoresForm, name="JugadoresFormulario"),
     path('error', views.error, name="Error"),
@@ -18,5 +18,4 @@ urlpatterns = [
     path('checkview', views3.checkview, name='checkview'),
     path('send', views3.send, name='send'),
     path('getMessages/<str:room>/', views3.getMessages, name='getMessages'),
-
 ]

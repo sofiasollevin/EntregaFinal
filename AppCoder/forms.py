@@ -1,5 +1,3 @@
-from socket import fromshare
-from unittest.util import _MAX_LENGTH
 from django import forms
 
 class JugadoresFormulario(forms.Form):
@@ -9,24 +7,9 @@ class JugadoresFormulario(forms.Form):
     nacimiento= forms.DateField()
     posicion = forms.CharField(max_length=30)
 
-class NosotrosFormulario(forms.Form):
-    nombre= forms.CharField(max_length=30)
-    apellido= forms.CharField(max_length=30)  
-    contactotelefonico= forms.IntegerField()
-    email= forms.EmailField()
 
 class ContactosFormulario(forms.Form):
     email= forms.EmailField()
     nombre= forms.CharField(max_length=30)
     contactotelefonico= forms.IntegerField()
     mensaje = forms.CharField(max_length=1000000)
-
-class SuscripcionesFormulario(forms.Form):
-    email = forms.EmailField()
-
-class UsuariosForm(forms.Form):
-    usuario= forms.CharField(max_length=30)
-    nombre = forms.CharField(max_length=30)
-    apellido = forms.CharField(max_length=30)
-    email = forms.EmailField()
-    contrasena = forms.CharField(widget=forms.PasswordInput)
